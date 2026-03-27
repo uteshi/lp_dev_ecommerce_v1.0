@@ -6,7 +6,7 @@
     <title>Gabriel Utsch | Gestão e Soluções em E-commerce</title>
     
     <link rel="icon" type="image/png" href="favicon-uteshi.png">
-
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@400;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
@@ -31,26 +31,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
     <style>
-        /* Estilos Globais e Efeitos Glassmorphism */
         .glass-badge { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.1); }
         .glass-badge-profile { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(5px); }
         .glass-badge-small { backdrop-filter: blur(3px); }
-        
-        /* Animações em Loop (CSS) */
         .float-badge { animation: float-slow 4s ease-in-out infinite; }
         .float-badge-delay { animation: float-slow 5s ease-in-out infinite 1s; }
         @keyframes float-slow { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-        
         .highlight-glow-loop { animation: text-glow 2.5s ease-in-out infinite; }
         @keyframes text-glow { 0%, 100% { text-shadow: 0 0 5px rgba(129, 140, 248, 0.2); } 50% { text-shadow: 0 0 15px rgba(129, 140, 248, 0.5); } }
-
-        /* Background Grid Interativo (Hero) */
         #hero-grid-effect { display: grid; position: absolute; inset: 0; z-index: 5; opacity: 0.35; }
         .grid-tile { position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
         .grid-tile::before { content: ''; position: absolute; width: 3px; height: 3px; border-radius: 50%; background-color: rgba(169, 201, 255, 0.4); transition: all 500ms linear; }
         .grid-tile:hover::before { width: 2.5rem; height: 2.5rem; background-color: rgba(99, 102, 241, 0.3); transition: all 70ms linear; }
-
-        /* Botão Magic Particles */
         .btn-magic { position: relative; display: inline-flex; align-items: center; justify-content: center; overflow: visible; cursor: pointer; --btn-bg: #4f46e5; --btn-hover: #ffffff; --text-hover: #18181b; --icon-color: #06b6d4; }
         .btn-magic.cyan-theme { --btn-bg: #06b6d4; --icon-color: #4f46e5; }
         .btn-magic.dark-theme { --btn-bg: #27272a; --btn-hover: #4f46e5; --text-hover: #ffffff; --icon-color: #ffffff; }
@@ -63,26 +55,12 @@
         .btn-magic .spot { position: absolute; border-radius: 50%; opacity: 0; z-index: 0; pointer-events: none; }
         .btn-magic:hover .spot { animation: spew-particles var(--duration) linear infinite; }
         @keyframes spew-particles { 0% { transform: translate(0, 0) scale(1); opacity: 0; } 20% { opacity: 0.7; } 80% { opacity: 0.7; } 100% { transform: translate(var(--tx), var(--ty)) scale(0.2); opacity: 0; } }
-
-        /* Marquee Animation (Carrossel Infinito) */
         .marquee-container { overflow: hidden; white-space: nowrap; width: 100%; position: relative; display: flex; align-items: center; }
         .marquee-content { display: flex; animation: marquee 30s linear infinite; }
         .marquee-content:hover { animation-play-state: paused; }
         @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-
-        /* Estilização Customizada do Select (Menu Cascata) */
-        .select-custom {
-            appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236366f1'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 1.25rem center;
-            background-size: 1.2rem;
-        }
-        .select-custom option {
-            background-color: #18181b; 
-            color: #e4e4e7;
-            padding: 10px;
-        }
+        .select-custom { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236366f1'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1.25rem center; background-size: 1.2rem; }
+        .select-custom option { background-color: #18181b; color: #e4e4e7; padding: 10px; }
     </style>
 </head>
 <body class="bg-zinc-950 text-white overflow-x-hidden font-montserrat">
@@ -109,19 +87,12 @@
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-900/10 via-zinc-950/80 to-zinc-950 z-10 pointer-events-none"></div>
 
         <div class="z-20 max-w-4xl hero-content relative pointer-events-none w-full">
-            <span class="inline-block py-1.5 px-4 rounded-full glass-badge text-sm font-josefin font-semibold tracking-widest mb-6 text-indigo-400 uppercase pointer-events-auto">
-                Da Criação à Gestão
-            </span>
+            <span class="inline-block py-1.5 px-4 rounded-full glass-badge text-sm font-josefin font-semibold tracking-widest mb-6 text-indigo-400 uppercase pointer-events-auto">Da Criação à Gestão</span>
             <h1 class="font-bebas text-5xl sm:text-6xl md:text-8xl tracking-normal mb-6 leading-tight md:leading-none text-zinc-100 break-words">
                 E-commerces que vendem, <br class="hidden md:block">
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400">
-                    potencializados por IA.
-                </span>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400">potencializados por IA.</span>
             </h1>
-            <p class="text-base sm:text-lg md:text-xl text-zinc-400 mb-10 max-w-2xl mx-auto leading-relaxed px-2">
-                Desenvolvimento de ponta e automação inteligente para o seu negócio escalar. 
-                Uma solução ponta a ponta construída com as ferramentas mais avançadas do mundo.
-            </p>
+            <p class="text-base sm:text-lg md:text-xl text-zinc-400 mb-10 max-w-2xl mx-auto leading-relaxed px-2">Desenvolvimento de ponta e automação inteligente para o seu negócio escalar. Uma solução ponta a ponta construída com as ferramentas mais avançadas do mundo.</p>
             <a href="#contato" class="btn-magic font-josefin font-bold py-4 px-8 sm:px-10 rounded-full tracking-wide text-base sm:text-lg relative z-30 pointer-events-auto shadow-[0_0_25px_rgba(79,70,229,0.5)]">
                 <div class="bg-layer"></div>
                 <svg class="icon w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -150,13 +121,10 @@
                 <div class="absolute -bottom-6 -left-6 bg-cyan-600/90 px-3 py-1.5 rounded-full text-xs font-josefin font-bold glass-badge-small float-badge-delay shadow-md">Shopify / Klaviyo</div>
             </div>
             <div class="flex-1 text-zinc-300 space-y-6 content-fade-in-about">
-                <h2 class="font-bebas text-4xl md:text-5xl tracking-normal mb-8 text-zinc-100">
-                    Do <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400 highlight-glow-loop">Administrativo TI</span> ao <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400 highlight-glow-loop">Campo de Batalha</span>
-                </h2>
-                <p>Sou o <strong class="text-indigo-300">Gabriel Utsch</strong>, especialista em gestão e operação de e-commerce, unindo visão administrativa em TI com prática direta na criação e crescimento de lojas online. Nos últimos anos, atuei na linha de frente de operações digitais, desde a estruturação de produtos até a experiência do cliente, sempre com foco em performance e escala.</p>
-                <p>Fui responsável pela gestão completa de um e-commerce de varejo na <strong class="text-cyan-300">Shopee (Utilitex)</strong>, cuidando de curadoria, cadastro estratégico de produtos, preço, atendimento e reputação da loja. Também atuei na <strong class="text-cyan-300">Genial Carimbos</strong>, gerenciando cadastro, conteúdo e campanhas de e-mail marketing em Shopify e Klaviyo.</p>
-                <p>Minha base é <strong class="text-indigo-300">administrativa em TI</strong>: organizo processos, padronizo rotinas, automatizo tarefas com planilhas, sistemas de <strong class="text-cyan-300">gestão (ERPs)</strong> e <strong class="text-cyan-300">VBA</strong>. Ao mesmo tempo, tenho experiência em relacionamento com clientes e fornecedores (incluindo China), garantindo operações fluidas e comunicação clara.</p>
-                <p>Hoje, ajudo negócios a vender mais e melhor, trazendo estrutura, organização e visão prática de quem já opera “no campo”. Se você precisa tirar um e-commerce do zero ou organizar o que já existe, eu entro para transformar operação em <strong class="text-indigo-300">resultado consistente</strong>.</p>
+                <h2 class="font-bebas text-4xl md:text-5xl tracking-normal mb-8 text-zinc-100">Do <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400 highlight-glow-loop">Administrativo TI</span> ao <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400 highlight-glow-loop">Campo de Batalha</span></h2>
+                <p>Sou o <strong class="text-indigo-300">Gabriel Utsch</strong>, especialista em gestão e operação de e-commerce, unindo visão administrativa em TI com prática direta na criação e crescimento de lojas online.</p>
+                <p>Fui responsável pela gestão completa na <strong class="text-cyan-300">Shopee (Utilitex)</strong> e atuei na <strong class="text-cyan-300">Genial Carimbos</strong> via Shopify e Klaviyo. Minha base é <strong class="text-indigo-300">administrativa em TI</strong>: organizo processos, padronizo rotinas e automatizo tarefas com sistemas de <strong class="text-cyan-300">gestão (ERPs)</strong> e <strong class="text-cyan-300">VBA</strong>.</p>
+                <p>Hoje, ajudo negócios a vender mais e melhor, trazendo estrutura e visão prática de quem já opera “no campo”.</p>
             </div>
         </div>
     </section>
@@ -166,62 +134,41 @@
             <div class="text-center mb-20 content-reveal-portfolio">
                 <span class="inline-block py-1.5 px-4 rounded-full glass-badge text-sm font-josefin font-semibold tracking-widest mb-6 text-indigo-400 uppercase">Projetos Recentes</span>
                 <h2 class="font-bebas text-4xl md:text-5xl tracking-normal mb-6 text-zinc-100">Arquitetura de <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400">Resultados.</span></h2>
-                <p class="text-lg text-zinc-400 max-w-2xl mx-auto">Não entrego apenas sites, construo ecossistemas de vendas. Conheça as soluções em e-commerce e automação desenvolvidas para escalar operações reais.</p>
             </div>
             <div class="space-y-16">
-                <div class="flex flex-col md:flex-row items-center gap-10 bg-zinc-900/50 border border-zinc-800 rounded-[2rem] p-8 md:p-12 hover:border-indigo-500/30 transition-colors duration-500 project-card">
+                <div class="flex flex-col md:flex-row items-center gap-10 bg-zinc-900/50 border border-zinc-800 rounded-[2rem] p-8 md:p-12 project-card">
                     <div class="w-full md:w-5/12 rounded-2xl overflow-hidden bg-zinc-200 relative shadow-xl">
-                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7402503669734096896?collapsed=1" class="w-full h-[500px] md:h-[550px]" frameborder="0" allowfullscreen="" title="Publicação incorporada"></iframe>
+                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7402503669734096896?collapsed=1" class="w-full h-[500px] md:h-[550px]" frameborder="0" allowfullscreen=""></iframe>
                     </div>
                     <div class="w-full md:w-7/12 space-y-6">
-                        <div class="flex flex-wrap gap-2 mb-4 font-josefin">
-                            <span class="text-xs font-medium bg-zinc-800 text-zinc-300 px-3 py-1 rounded-full">B2B</span>
-                            <span class="text-xs font-medium bg-zinc-800 text-zinc-300 px-3 py-1 rounded-full">Automação Administrativa</span>
-                        </div>
-                        <h3 class="font-bebas text-4xl md:text-5xl tracking-normal text-zinc-100">DLS Comércio</h3>
-                        <p class="text-zinc-400 leading-relaxed text-lg">Estruturação digital para empresa com forte atuação corporativa e em licitações públicas. Integração da interface do site com a necessidade de geração de documentos e painéis de gestão.</p>
-                        <a href="https://www.dlscomercio.com.br" target="_blank" rel="noopener noreferrer" class="btn-magic font-josefin font-semibold py-3 px-8 rounded-full text-lg mt-4">
-                            <div class="bg-layer"></div>
-                            <svg class="icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                            <span class="t">Acessar Projeto</span>
-                        </a>
+                        <h3 class="font-bebas text-4xl md:text-5xl text-zinc-100">DLS Comércio</h3>
+                        <p class="text-zinc-400 text-lg">Estruturação digital para empresa corporativa e licitações públicas. Foco em autoridade e processos administrativos integrados.</p>
+                        <a href="https://www.dlscomercio.com.br" target="_blank" class="btn-magic font-josefin font-semibold py-3 px-8 rounded-full text-lg mt-4"><div class="bg-layer"></div><span class="t">Acessar Projeto</span></a>
                     </div>
                 </div>
-                <div class="flex flex-col md:flex-row-reverse items-center gap-10 bg-zinc-900/50 border border-zinc-800 rounded-[2rem] p-8 md:p-12 hover:border-cyan-500/30 transition-colors duration-500 project-card">
+                <div class="flex flex-col md:flex-row-reverse items-center gap-10 bg-zinc-900/50 border border-zinc-800 rounded-[2rem] p-8 md:p-12 project-card">
                     <div class="w-full md:w-5/12 rounded-2xl overflow-hidden bg-zinc-200 relative shadow-xl">
-                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7437275670528909312?collapsed=1" class="w-full h-[500px] md:h-[650px]" frameborder="0" allowfullscreen="" title="Publicação incorporada"></iframe>
+                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7437275670528909312?collapsed=1" class="w-full h-[500px] md:h-[650px]" frameborder="0" allowfullscreen=""></iframe>
                     </div>
                     <div class="w-full md:w-7/12 space-y-6">
-                        <div class="flex flex-wrap gap-2 mb-4 font-josefin">
-                            <span class="text-xs font-medium bg-zinc-800 text-zinc-300 px-3 py-1 rounded-full">E-commerce B2C</span>
-                            <span class="text-xs font-medium bg-zinc-800 text-zinc-300 px-3 py-1 rounded-full">Carrinho Inteligente</span>
-                        </div>
-                        <h3 class="font-bebas text-4xl md:text-5xl tracking-normal text-zinc-100">Serena Enxovais</h3>
-                        <p class="text-zinc-400 leading-relaxed text-lg">Desenvolvimento de Landing Page de alta conversão focada na jornada do consumidor. Catálogo dinâmico, carrinho de compras e módulo de cálculo de frete fluidos.</p>
-                        <a href="https://serenaenxovais.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-magic cyan-theme font-josefin font-semibold py-3 px-8 rounded-full text-lg mt-4">
-                            <div class="bg-layer"></div>
-                            <svg class="icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                            <span class="t">Acessar Projeto</span>
-                        </a>
+                        <h3 class="font-bebas text-4xl md:text-5xl text-zinc-100">Serena Enxovais</h3>
+                        <p class="text-zinc-400 text-lg">Landing Page de alta conversão. Catálogo dinâmico e jornada de compra otimizada para o varejo.</p>
+                        <a href="https://serenaenxovais.netlify.app/" target="_blank" class="btn-magic cyan-theme font-josefin font-semibold py-3 px-8 rounded-full text-lg mt-4"><div class="bg-layer"></div><span class="t">Acessar Projeto</span></a>
                     </div>
                 </div>
-                <div class="flex flex-col md:flex-row items-center gap-10 bg-zinc-900/50 border border-zinc-800 rounded-[2rem] p-8 md:p-12 hover:border-orange-500/30 transition-colors duration-500 project-card">
+                <div class="flex flex-col md:flex-row items-center gap-10 bg-zinc-900/50 border border-zinc-800 rounded-[2rem] p-8 md:p-12 project-card">
                     <div class="w-full md:w-5/12 rounded-2xl overflow-hidden bg-zinc-800 relative group flex items-center justify-center cursor-pointer shadow-xl h-[250px] md:h-auto">
-                        <img src="banner_shopee.jpeg" alt="Banner Shopee Gabriel Utsch" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <img src="banner_shopee.jpeg" alt="Banner Shopee" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="hidden md:flex absolute inset-0 bg-black/70 backdrop-blur-sm flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-10">
-                            <span class="block font-bebas text-orange-500 text-7xl md:text-8xl tracking-normal mb-2 drop-shadow-[0_0_20px_rgba(249,115,22,0.8)] translate-y-8 group-hover:translate-y-0 transition-transform duration-500 ease-out">R$ 92k</span>
-                            <span class="font-josefin text-white tracking-widest uppercase text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-200">Faturamento Alcançado</span>
+                            <span class="block font-bebas text-orange-500 text-7xl md:text-8xl tracking-normal mb-2">R$ 92k</span>
+                            <span class="font-josefin text-white uppercase text-sm">Faturamento Alcançado</span>
                         </div>
-                        <div class="absolute bottom-4 right-4 bg-orange-600/90 backdrop-blur-md text-white font-bebas text-3xl px-4 py-1.5 rounded-xl md:hidden shadow-lg border border-orange-400/30 z-20">R$ 92K</div>
+                        <div class="absolute bottom-4 right-4 bg-orange-600/90 backdrop-blur-md text-white font-bebas text-3xl px-4 py-1.5 rounded-xl md:hidden z-20">R$ 92K</div>
                     </div>
                     <div class="w-full md:w-7/12 space-y-6">
-                        <div class="flex flex-wrap gap-2 mb-4 font-josefin">
-                            <span class="text-xs font-medium bg-zinc-800 text-zinc-300 px-3 py-1 rounded-full">Shopee</span>
-                            <span class="text-xs font-medium bg-zinc-800 text-zinc-300 px-3 py-1 rounded-full">Gestão de Operação</span>
-                        </div>
-                        <h3 class="font-bebas text-4xl md:text-5xl tracking-normal text-zinc-100">Operação Marketplace: Carimbos</h3>
-                        <p class="text-zinc-400 leading-relaxed text-lg">Gestão ponta a ponta de operação na Shopee. O desafio envolveu curadoria, precificação e cadastro estratégico para o algoritmo da plataforma, resultando em mais de R$ 92.000,00 faturados no ano de 2025.</p>
-                        <div class="mt-4 inline-flex items-center gap-2 text-orange-400 font-josefin font-semibold py-3 px-1 rounded-full text-lg"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>Operação Validada no Campo</div>
+                        <h3 class="font-bebas text-4xl md:text-5xl text-zinc-100">Operação Marketplace</h3>
+                        <p class="text-zinc-400 text-lg">Gestão ponta a ponta na Shopee, resultando em mais de R$ 92.000,00 faturados em 2025 com alta aprovação.</p>
+                        <div class="mt-4 inline-flex items-center gap-2 text-orange-400 font-josefin font-semibold py-3 px-1 text-lg">✓ Operação Validada no Campo</div>
                     </div>
                 </div>
             </div>
@@ -238,162 +185,68 @@
     </section>
 
     <section class="relative bg-zinc-950 text-white py-24 px-6 z-10">
-        <div class="max-w-6xl mx-auto reveal-section">
-            <div class="text-center mb-16">
-                <h2 class="font-bebas text-4xl md:text-5xl tracking-normal mb-6 text-zinc-100">Por que o seu E-commerce não <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600">Escala?</span></h2>
-                <p class="text-lg text-zinc-400 max-w-2xl mx-auto">Muitos lojistas travam na barreira da burocracia técnica. É aqui que a nossa operação entra em cena.</p>
+        <div class="max-w-6xl mx-auto reveal-section grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-zinc-900/50 border border-red-900/30 rounded-3xl p-8 relative overflow-hidden">
+                <h3 class="font-josefin font-bold text-2xl text-red-400 mb-6">O Amadorismo Custa Caro</h3>
+                <ul class="space-y-4 font-montserrat text-zinc-400"><li>✗ Processos manuais</li><li>✗ Layout confuso</li><li>✗ Erros logísticos</li></ul>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-zinc-900/50 border border-red-900/30 rounded-3xl p-8 md:p-10 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-red-600/10 rounded-full blur-3xl"></div>
-                    <h3 class="font-josefin font-bold text-2xl text-red-400 mb-6 flex items-center gap-3"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> O Amadorismo Custa Caro</h3>
-                    <ul class="space-y-4 font-montserrat text-zinc-400">
-                        <li class="flex items-start gap-3"><span class="text-red-500 mt-1">✗</span> Processos manuais lentos no cadastro de produtos.</li>
-                        <li class="flex items-start gap-3"><span class="text-red-500 mt-1">✗</span> Layout confuso que afasta o cliente no primeiro clique.</li>
-                        <li class="flex items-start gap-3"><span class="text-red-500 mt-1">✗</span> Carrinhos abandonados sem fluxo de recuperação ativo.</li>
-                        <li class="flex items-start gap-3"><span class="text-red-500 mt-1">✗</span> Erros no cálculo logístico prejudicando a margem.</li>
-                    </ul>
-                </div>
-                <div class="bg-zinc-900/80 border border-indigo-500/40 rounded-3xl p-8 md:p-10 relative overflow-hidden shadow-[0_0_30px_rgba(79,70,229,0.1)]">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-cyan-400/10 rounded-full blur-3xl"></div>
-                    <h3 class="font-josefin font-bold text-2xl text-cyan-400 mb-6 flex items-center gap-3"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Operação de Alta Performance</h3>
-                    <ul class="space-y-4 font-montserrat text-zinc-300">
-                        <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">✓</span> Interface de alta conversão (UI/UX) focada em vendas.</li>
-                        <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">✓</span> Integração automática com o ERP adequado ao seu negócio.</li>
-                        <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">✓</span> Automações de E-mail Marketing rodando em segundo plano.</li>
-                        <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">✓</span> Logística inteligente para envios simplificados e ágeis.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="relative bg-zinc-900 text-white py-24 px-6 z-10 border-t border-zinc-800">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16 reveal-section">
-                <span class="inline-block py-1.5 px-4 rounded-full glass-badge text-sm font-josefin font-semibold tracking-widest mb-6 text-indigo-400 uppercase">Como Trabalhamos</span>
-                <h2 class="font-bebas text-4xl md:text-5xl tracking-normal mb-6 text-zinc-100">O Mapa da <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Escala.</span></h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div class="bg-zinc-950 p-8 rounded-3xl border border-zinc-800 relative reveal-step">
-                    <div class="text-indigo-500 font-bebas text-6xl opacity-20 absolute top-4 right-6">01</div>
-                    <h3 class="font-josefin text-xl font-bold text-zinc-100 mb-3 mt-4">Diagnóstico</h3>
-                    <p class="text-zinc-400 text-sm leading-relaxed">Análise do nicho, concorrência, dores atuais da operação e planejamento estratégico focado em margem.</p>
-                </div>
-                <div class="bg-zinc-950 p-8 rounded-3xl border border-zinc-800 relative reveal-step">
-                    <div class="text-indigo-500 font-bebas text-6xl opacity-20 absolute top-4 right-6">02</div>
-                    <h3 class="font-josefin text-xl font-bold text-zinc-100 mb-3 mt-4">Estruturação</h3>
-                    <p class="text-zinc-400 text-sm leading-relaxed">Criação da loja, design de interface, cadastro técnico de produtos (SEO) e configuração de meios de pagamento.</p>
-                </div>
-                <div class="bg-zinc-950 p-8 rounded-3xl border border-zinc-800 relative reveal-step">
-                    <div class="text-cyan-500 font-bebas text-6xl opacity-20 absolute top-4 right-6">03</div>
-                    <h3 class="font-josefin text-xl font-bold text-zinc-100 mb-3 mt-4">Automação</h3>
-                    <p class="text-zinc-400 text-sm leading-relaxed">Conexão de ponta a ponta: integração com ERP, controle de estoque automático, planilhas gerenciais e réguas de e-mail.</p>
-                </div>
-                <div class="bg-zinc-950 p-8 rounded-3xl border border-indigo-500/30 relative reveal-step shadow-[0_0_20px_rgba(79,70,229,0.1)]">
-                    <div class="text-indigo-400 font-bebas text-6xl opacity-20 absolute top-4 right-6">04</div>
-                    <h3 class="font-josefin text-xl font-bold text-zinc-100 mb-3 mt-4">Escala</h3>
-                    <p class="text-zinc-400 text-sm leading-relaxed">Monitoramento de conversão, otimização contínua da jornada do cliente e gestão baseada em dados reais.</p>
-                </div>
+            <div class="bg-zinc-900/80 border border-indigo-500/40 rounded-3xl p-8 relative overflow-hidden shadow-[0_0_30px_rgba(79,70,229,0.1)]">
+                <h3 class="font-josefin font-bold text-2xl text-cyan-400 mb-6">Operação de Performance</h3>
+                <ul class="space-y-4 font-montserrat text-zinc-300"><li>✓ Interface de conversão</li><li>✓ Integração automática</li><li>✓ Gestão por dados</li></ul>
             </div>
         </div>
     </section>
 
     <section id="contato" class="relative bg-zinc-950 text-white py-24 px-6 z-10 border-t border-zinc-800/50">
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-2xl h-64 bg-indigo-600/10 blur-[100px] pointer-events-none"></div>
-
         <div class="max-w-4xl mx-auto relative z-10">
             <div class="text-center mb-16 reveal-form">
-                <span class="inline-block py-1.5 px-4 rounded-full glass-badge text-sm font-josefin font-semibold tracking-widest mb-6 text-indigo-400 uppercase">
-                    Exclusividade
-                </span>
-                <h2 class="font-bebas text-4xl md:text-5xl tracking-normal mb-6 text-zinc-100">
-                    Aplicação para <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400">Consultoria.</span>
-                </h2>
-                <p class="text-lg text-zinc-400 max-w-2xl mx-auto">
-                    Nosso modelo de trabalho exige acompanhamento próximo, por isso atendemos um número restrito de clientes. Preencha o formulário abaixo e, caso haja fit, entraremos em contato para agendar uma reunião estratégica.
-                </p>
+                <span class="inline-block py-1.5 px-4 rounded-full glass-badge text-sm font-josefin font-semibold text-indigo-400 uppercase">Exclusividade</span>
+                <h2 class="font-bebas text-4xl md:text-5xl mb-6">Aplicação para <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400">Consultoria.</span></h2>
+                <p class="text-lg text-zinc-400">Preencha os dados e entraremos em contato caso haja fit para a operação.</p>
             </div>
 
-            <form id="qualify-form" name="AplicacaoConsultoria" method="POST" data-netlify="true" class="bg-zinc-900/60 border border-zinc-800 rounded-[2rem] p-8 md:p-12 shadow-2xl backdrop-blur-md reveal-form">
-                
+            <form action="https://formspree.io/f/xvgzbgnn" method="POST" class="bg-zinc-900/60 border border-zinc-800 rounded-[2rem] p-8 md:p-12 shadow-2xl backdrop-blur-md reveal-form">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
-                        <label class="block text-xs font-josefin uppercase tracking-widest text-zinc-400 mb-2 font-semibold" for="nome">Nome Completo</label>
-                        <input type="text" id="nome" name="nome" placeholder="Como devemos te chamar?" required class="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-5 py-4 text-zinc-200 font-montserrat outline-none transition-all duration-300 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500/50 focus:bg-zinc-900 placeholder-zinc-600">
+                        <label class="block text-xs font-josefin uppercase text-zinc-400 mb-2 font-semibold">Nome Completo</label>
+                        <input type="text" name="nome" placeholder="Seu nome" required class="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-5 py-4 text-zinc-200 font-montserrat outline-none focus:border-indigo-500 placeholder-zinc-600">
                     </div>
                     <div>
-                        <label class="block text-xs font-josefin uppercase tracking-widest text-zinc-400 mb-2 font-semibold" for="email">E-mail Profissional</label>
-                        <input type="email" id="email" name="email" placeholder="seu@email.com" required class="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-5 py-4 text-zinc-200 font-montserrat outline-none transition-all duration-300 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500/50 focus:bg-zinc-900 placeholder-zinc-600">
+                        <label class="block text-xs font-josefin uppercase text-zinc-400 mb-2 font-semibold">E-mail Profissional</label>
+                        <input type="email" name="email" placeholder="seu@email.com" required class="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-5 py-4 text-zinc-200 font-montserrat outline-none focus:border-indigo-500 placeholder-zinc-600">
                     </div>
                 </div>
-
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
-                        <label class="block text-xs font-josefin uppercase tracking-widest text-zinc-400 mb-2 font-semibold" for="whatsapp">WhatsApp / Telefone</label>
-                        <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 00000-0000" required class="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-5 py-4 text-zinc-200 font-montserrat outline-none transition-all duration-300 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500/50 focus:bg-zinc-900 placeholder-zinc-600">
+                        <label class="block text-xs font-josefin uppercase text-zinc-400 mb-2 font-semibold">WhatsApp</label>
+                        <input type="tel" name="whatsapp" placeholder="(00) 00000-0000" required class="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-5 py-4 text-zinc-200 font-montserrat outline-none focus:border-indigo-500 placeholder-zinc-600">
                     </div>
                     <div>
-                        <label class="block text-xs font-josefin uppercase tracking-widest text-zinc-400 mb-2 font-semibold" for="empresa">Nome do Negócio</label>
-                        <input type="text" id="empresa" name="empresa" placeholder="Sua marca ou empresa" required class="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-5 py-4 text-zinc-200 font-montserrat outline-none transition-all duration-300 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500/50 focus:bg-zinc-900 placeholder-zinc-600">
+                        <label class="block text-xs font-josefin uppercase text-zinc-400 mb-2 font-semibold">Nome do Negócio</label>
+                        <input type="text" name="empresa" placeholder="Sua marca" required class="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-5 py-4 text-zinc-200 font-montserrat outline-none focus:border-indigo-500 placeholder-zinc-600">
                     </div>
                 </div>
-
                 <div class="mb-6">
-                    <label class="block text-xs font-josefin uppercase tracking-widest text-zinc-400 mb-2 font-semibold" for="motivo">Motivo do Contato</label>
-                    <select id="motivo" name="motivo" required class="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-5 py-4 text-zinc-200 font-montserrat outline-none transition-all duration-300 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500/50 focus:bg-zinc-900 select-custom">
-                        <option value="" disabled selected>Selecione uma opção...</option>
-                        <option value="duvidas">Dúvidas Gerais</option>
-                        <option value="informal">Bate-papo / Parceria Informal</option>
-                        <option value="comercial">Reunião Comercial (Escalar Negócio)</option>
+                    <label class="block text-xs font-josefin uppercase text-zinc-400 mb-2 font-semibold">Motivo do Contato</label>
+                    <select id="motivo" name="motivo" required class="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-5 py-4 text-zinc-200 select-custom">
+                        <option value="" disabled selected>Selecione...</option>
+                        <option value="duvidas">Dúvidas</option>
+                        <option value="informal">Café Informal</option>
+                        <option value="comercial">Reunião Comercial</option>
                     </select>
                 </div>
-
                 <div class="mb-6">
-                    <label class="block text-xs font-josefin uppercase tracking-widest text-zinc-400 mb-2 font-semibold" for="descricao">Descrição Breve</label>
-                    <textarea id="descricao" name="descricao" rows="3" placeholder="Como posso te ajudar no seu momento atual?" class="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-5 py-4 text-zinc-200 font-montserrat outline-none transition-all duration-300 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500/50 focus:bg-zinc-900 placeholder-zinc-600 resize-none"></textarea>
+                    <label class="block text-xs font-josefin uppercase text-zinc-400 mb-2 font-semibold">Descrição Breve</label>
+                    <textarea name="descricao" rows="3" placeholder="Como posso ajudar?" class="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-5 py-4 text-zinc-200 font-montserrat outline-none placeholder-zinc-600 resize-none"></textarea>
                 </div>
 
                 <div id="comercial-fields" class="hidden grid-cols-1 md:grid-cols-2 gap-6 mb-6 bg-zinc-950/40 p-6 rounded-2xl border border-indigo-500/20 mt-8">
-                    <div class="col-span-1 md:col-span-2 mb-2">
-                        <h4 class="font-josefin font-bold text-indigo-400 uppercase tracking-widest text-sm flex items-center gap-2">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                            Filtro Comercial Avançado
-                        </h4>
-                        <p class="text-xs text-zinc-500 font-montserrat mt-1">Dados necessários para analisarmos a viabilidade da operação antes do nosso call.</p>
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-josefin uppercase tracking-widest text-zinc-400 mb-2 font-semibold" for="cnpj">CNPJ (Opcional)</label>
-                        <input type="text" id="cnpj" name="cnpj" placeholder="00.000.000/0000-00" class="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-5 py-4 text-zinc-200 font-montserrat outline-none transition-all duration-300 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500/50 focus:bg-zinc-900 placeholder-zinc-600">
-                    </div>
-                    
-                    <div>
-                        <label class="block text-xs font-josefin uppercase tracking-widest text-zinc-400 mb-2 font-semibold" for="faturamento">Faturamento Anual Atual</label>
-                        <select id="faturamento" name="faturamento" class="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-5 py-4 text-zinc-200 font-montserrat outline-none transition-all duration-300 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500/50 focus:bg-zinc-900 select-custom">
-                            <option value="" disabled selected>Selecione uma faixa...</option>
-                            <option value="zero">Ainda não faturo</option>
-                            <option value="ate-100k">Até R$ 100.000,00</option>
-                            <option value="100k-500k">De R$ 100k a R$ 500k</option>
-                            <option value="mais-500k">Mais de R$ 500.000,00</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-josefin uppercase tracking-widest text-zinc-400 mb-2 font-semibold" for="funcionarios">Nº de Funcionários na Operação</label>
-                        <input type="number" id="funcionarios" name="funcionarios" min="0" placeholder="Ex: 2" class="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-5 py-4 text-zinc-200 font-montserrat outline-none transition-all duration-300 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500/50 focus:bg-zinc-900 placeholder-zinc-600">
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-josefin uppercase tracking-widest text-zinc-400 mb-2 font-semibold" for="momento">Possui Loja Online?</label>
-                        <select id="momento" name="momento" class="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-5 py-4 text-zinc-200 font-montserrat outline-none transition-all duration-300 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500/50 focus:bg-zinc-900 select-custom">
-                            <option value="" disabled selected>Qual seu momento?</option>
-                            <option value="sim">Sim, já opero e quero otimizar</option>
-                            <option value="3meses">Não, quero lançar em até 3 meses</option>
-                            <option value="6meses">Não, quero lançar em até 6 meses</option>
-                            <option value="futuro">Apenas ideias para o futuro</option>
-                        </select>
-                    </div>
+                    <div class="col-span-full font-josefin text-indigo-400 text-sm mb-2 uppercase tracking-widest">Filtro Comercial Avançado</div>
+                    <div><label class="block text-xs text-zinc-500 mb-1">CNPJ</label><input type="text" name="cnpj" class="w-full bg-zinc-950/50 border border-zinc-800 rounded-lg p-3 text-sm"></div>
+                    <div><label class="block text-xs text-zinc-500 mb-1">Faturamento Anual</label><select name="faturamento" class="w-full bg-zinc-950/50 border border-zinc-800 rounded-lg p-3 text-sm"><option value="0">Ainda não faturo</option><option value="100k">Até 100k</option><option value="500k">Até 500k</option></select></div>
+                    <div><label class="block text-xs text-zinc-500 mb-1">Funcionários</label><input type="number" name="funcionarios" class="w-full bg-zinc-950/50 border border-zinc-800 rounded-lg p-3 text-sm"></div>
+                    <div><label class="block text-xs text-zinc-500 mb-1">Possui Loja Online?</label><select name="loja_ativa" class="w-full bg-zinc-950/50 border border-zinc-800 rounded-lg p-3 text-sm"><option value="sim">Sim</option><option value="nao">Não, plano para 3 meses</option></select></div>
                 </div>
 
                 <div class="mt-10 flex justify-center">
@@ -408,47 +261,27 @@
     </section>
 
     <footer class="bg-zinc-950 border-t border-zinc-800/50 pt-16 pb-8 relative z-10 overflow-hidden">
-        
         <div class="absolute inset-0 opacity-[0.03] pointer-events-none" id="footer-background-grid">
-            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <pattern id="footer-grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#6366f1" stroke-width="1"/>
-                    </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#footer-grid)" />
-            </svg>
+            <svg width="100%" height="100%"><defs><pattern id="footer-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#6366f1" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(#footer-grid)" /></svg>
         </div>
-
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-10 mb-12">
-                
-                <div class="text-center md:text-left">
-                    <h2 class="font-bebas text-3xl tracking-widest text-zinc-100 mb-2">
-                        Gabriel <span class="text-indigo-500 hover:highlight-glow transition-all duration-300">"Uteshi"</span> Utsch
-                    </h2>
-                    <p class="font-montserrat text-sm text-zinc-500 max-w-xs mx-auto md:mx-0">E-commerces que vendem, potencializados por IA e gestão inteligente.</p>
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center md:text-left">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-10 mb-12">
+                <div>
+                    <h2 class="font-bebas text-3xl tracking-widest text-zinc-100">Gabriel <span class="text-indigo-500">"Uteshi"</span> Utsch</h2>
+                    <p class="font-montserrat text-sm text-zinc-500 max-w-xs">E-commerces que vendem, potencializados por IA e gestão inteligente.</p>
                 </div>
-                
-                <div class="flex flex-wrap justify-center gap-6 md:gap-8 font-josefin text-sm font-semibold tracking-widest uppercase mt-4 md:mt-2">
-                    <a href="#sobre" class="text-zinc-500 hover:text-indigo-400 transition-colors">Sobre</a>
-                    <a href="#portfolio" class="text-zinc-500 hover:text-cyan-400 transition-colors">Projetos</a>
-                    <a href="#contato" class="text-zinc-500 hover:text-indigo-400 transition-colors">Aplicação</a>
+                <div class="flex flex-wrap gap-8 font-josefin text-sm font-semibold tracking-widest uppercase">
+                    <a href="#sobre" class="text-zinc-500 hover:text-indigo-400">Sobre</a>
+                    <a href="#portfolio" class="text-zinc-500 hover:text-cyan-400">Projetos</a>
+                    <a href="#contato" class="text-zinc-500 hover:text-indigo-400">Aplicação</a>
                 </div>
-
-                <div class="flex gap-4 mt-2 md:mt-0">
-                    <a href="https://www.linkedin.com/in/uteshi" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-white hover:border-indigo-500 hover:bg-indigo-500/20 transition-all shadow-lg hover:shadow-[0_0_15px_rgba(79,70,229,0.3)]">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                    </a>
-                    <a href="https://www.behance.net/uteshi" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-white hover:border-[#1769ff] hover:bg-[#1769ff]/20 transition-all shadow-lg hover:shadow-[0_0_15px_rgba(23,105,255,0.3)]">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 7h-7v-2h7v2zm1.721 5.836c0 5.446-5.335 5.867-6.59 5.867-5.077 0-5.692-4.225-5.692-5.932 0-4.998 3.965-6.265 6.046-6.265 3.966 0 5.632 2.542 5.632 5.073 0 .373-.016.906-.016 1.257h-8.08c.116 2.062 1.611 3.235 3.585 3.235 1.419 0 2.296-.546 2.946-1.506h3.209c-.83 2.105-3.003 3.328-5.753 3.328-4.321 0-6.936-3.155-6.936-6.732 0-3.87 2.766-7.14 7.022-7.14 4.544 0 6.643 3.207 6.643 6.602l-.016.213zm-2.909-1.956c-.23-1.637-1.536-2.613-3.116-2.613-1.579 0-2.637.954-2.905 2.613h6.021zm-15.655-2.071c1.556 0 3.016.431 3.493 2.15.22.793.181 2.148-.718 3.013 1.252.602 1.939 1.66 1.939 3.266 0 3.655-3.411 4.542-6.196 4.542h-5.675v-13.784h6.06c1.326 0 2.98.026 3.993.411 1.056.402 1.54 1.205 1.54 2.115-.001 2.222-2.14 2.693-4.436 2.287zm-1.096 4.975c1.474 0 2.726-.266 2.726-1.743 0-1.478-1.252-1.61-2.585-1.61h-2.197v3.353h2.056zm.268 3.924c1.666 0 2.982-.239 2.982-1.992 0-1.753-1.316-2.006-2.822-2.006h-2.484v3.998h2.324z"></path></svg>
-                    </a>
+                <div class="flex gap-4">
+                    <a href="https://www.linkedin.com/in/uteshi" target="_blank" class="w-10 h-10 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-white transition-all"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
                 </div>
             </div>
-
             <div class="border-t border-zinc-800/50 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-montserrat text-zinc-600">
                 <p>&copy; 2026 Gabriel "UTESHI" Utsch. Todos os direitos reservados.</p>
-                <p>Desenvolvido por <a href="https://www.linkedin.com/in/uteshi" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-indigo-400 transition-colors font-bold tracking-wide">Uteshi</a></p>
+                <p>Desenvolvido por <a href="https://www.linkedin.com/in/uteshi" target="_blank" class="text-zinc-400 hover:text-indigo-400 font-bold">Uteshi</a></p>
             </div>
         </div>
     </footer>
@@ -456,80 +289,50 @@
     <script>
         gsap.registerPlugin(ScrollTrigger);
         
-        // --- Lógica do Formulário (Cascata Comercial) ---
+        // Revelar campos comerciais
         const motivoSelect = document.getElementById('motivo');
         const comercialFields = document.getElementById('comercial-fields');
-
         motivoSelect.addEventListener('change', function() {
             if(this.value === 'comercial') {
-                comercialFields.classList.remove('hidden');
-                comercialFields.style.display = 'grid'; 
-                gsap.fromTo(comercialFields.children, 
-                    { opacity: 0, y: 15 }, 
-                    { opacity: 1, y: 0, duration: 0.4, stagger: 0.05, ease: "power2.out" }
-                );
-            } else {
-                comercialFields.classList.add('hidden');
-                comercialFields.style.display = '';
-            }
+                comercialFields.classList.remove('hidden'); comercialFields.style.display = 'grid';
+                gsap.fromTo(comercialFields.children, { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.4, stagger: 0.05 });
+            } else { comercialFields.classList.add('hidden'); comercialFields.style.display = ''; }
         });
 
-        // --- GERADOR DE PARTÍCULAS PARA OS BOTÕES MAGIC ---
+        // Partículas botões
         document.querySelectorAll('.btn-magic').forEach(btn => {
-            const numSpots = 25; 
-            for (let i = 0; i < numSpots; i++) {
-                let spot = document.createElement('div');
-                spot.className = 'spot';
-                let colorBase = '#4f46e5'; 
-                if (btn.classList.contains('cyan-theme')) colorBase = '#06b6d4';
-                if (btn.classList.contains('dark-theme')) colorBase = '#3f3f46';
-                let colorAccent = '#ffffff';
-                spot.style.background = Math.random() > 0.3 ? colorBase : colorAccent;
-                let size = Math.random() * 4 + 2; 
-                spot.style.width = `${size}px`; spot.style.height = `${size}px`;
-                let angle = Math.random() * Math.PI * 2; let distance = Math.random() * 40 + 20; 
-                spot.style.setProperty('--tx', `${Math.cos(angle) * distance}px`); spot.style.setProperty('--ty', `${Math.sin(angle) * distance}px`);
-                spot.style.setProperty('--duration', `${0.6 + Math.random() * 0.8}s`); spot.style.animationDelay = `${Math.random()}s`;
-                spot.style.left = `calc(50% - ${size/2}px)`; spot.style.top = `calc(50% - ${size/2}px)`;
-                btn.appendChild(spot);
+            for (let i = 0; i < 20; i++) {
+                let spot = document.createElement('div'); spot.className = 'spot';
+                let color = btn.classList.contains('cyan-theme') ? '#06b6d4' : '#4f46e5';
+                spot.style.background = Math.random() > 0.3 ? color : '#fff';
+                let angle = Math.random() * Math.PI * 2; let dist = Math.random() * 40 + 20;
+                spot.style.setProperty('--tx', `${Math.cos(angle) * dist}px`); spot.style.setProperty('--ty', `${Math.sin(angle) * dist}px`);
+                spot.style.setProperty('--duration', `${0.6 + Math.random() * 0.8}s`);
+                spot.style.width = spot.style.height = `${Math.random() * 3 + 2}px`;
+                spot.style.left = spot.style.top = '50%'; btn.appendChild(spot);
             }
         });
 
-        // --- GRID INTERATIVO DA HERO ---
-        const gridEffect = document.getElementById('hero-grid-effect');
-        function createGridTiles() {
-            gridEffect.innerHTML = ''; const size = 60; 
-            const cols = Math.ceil(window.innerWidth / size); const rows = Math.ceil(window.innerHeight / size);
-            gridEffect.style.gridTemplateColumns = `repeat(${cols}, 1fr)`; gridEffect.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
-            for (let i = 0; i < cols * rows; i++) { const tile = document.createElement('div'); tile.className = 'grid-tile'; gridEffect.appendChild(tile); }
+        // Grid Interativo Hero
+        const grid = document.getElementById('hero-grid-effect');
+        function createGrid() {
+            grid.innerHTML = ''; const size = 60; const cols = Math.ceil(window.innerWidth / size); const rows = Math.ceil(window.innerHeight / size);
+            grid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`; grid.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
+            for (let i = 0; i < cols * rows; i++) { const t = document.createElement('div'); t.className = 'grid-tile'; grid.appendChild(t); }
         }
-        createGridTiles(); window.addEventListener('resize', createGridTiles);
+        createGrid(); window.addEventListener('resize', createGrid);
 
-        // --- GSAP REVEALS ---
-        gsap.from(".hero-content > *", { y: 40, opacity: 0, duration: 1.2, stagger: 0.2, ease: "power3.out", delay: 0.3 });
-        gsap.from(".content-fade-in-about > *", { scrollTrigger: { trigger: "#sobre", start: "top 75%", toggleActions: "play none none reverse" }, y: 30, opacity: 0, duration: 1, stagger: 0.15, ease: "power3.out" });
-        gsap.from(".content-reveal-portfolio > *", { scrollTrigger: { trigger: "#portfolio", start: "top 80%", toggleActions: "play none none reverse" }, y: 30, opacity: 0, duration: 1, stagger: 0.15, ease: "power3.out" });
-        gsap.utils.toArray('.project-card').forEach((card) => { gsap.from(card, { scrollTrigger: { trigger: card, start: "top 85%", toggleActions: "play none none reverse" }, y: 50, opacity: 0, duration: 1.2, ease: "power3.out" }); });
-        gsap.from(".reveal-section > *", { scrollTrigger: { trigger: ".reveal-section", start: "top 85%", toggleActions: "play none none reverse" }, y: 30, opacity: 0, duration: 1, stagger: 0.15, ease: "power3.out" });
-        gsap.utils.toArray('.reveal-step').forEach((step, i) => { gsap.from(step, { scrollTrigger: { trigger: step, start: "top 90%", toggleActions: "play none none reverse" }, y: 40, opacity: 0, duration: 0.8, delay: i * 0.15, ease: "power3.out" }); });
-        gsap.from(".reveal-form", { scrollTrigger: { trigger: "#contato", start: "top 75%", toggleActions: "play none none reverse" }, y: 40, opacity: 0, duration: 1, stagger: 0.2, ease: "power3.out" });
+        // GSAP Reveals
+        gsap.from(".hero-content > *", { y: 40, opacity: 0, duration: 1.2, stagger: 0.2, ease: "power3.out" });
+        gsap.from(".content-fade-in-about > *", { scrollTrigger: { trigger: "#sobre", start: "top 75%" }, y: 30, opacity: 0, duration: 1, stagger: 0.15 });
+        gsap.utils.toArray('.project-card').forEach((c) => { gsap.from(c, { scrollTrigger: { trigger: c, start: "top 85%" }, y: 50, opacity: 0, duration: 1.2 }); });
+        gsap.fromTo("#footer-background-grid", { opacity: 0.02, scale: 1 }, { opacity: 0.04, scale: 1.02, duration: 8, repeat: -1, yoyo: true, ease: "sine.inOut" });
 
-        // --- Lógica Canvas Snake ---
-        const canvas = document.getElementById('about-snake-animation');
-        const ctx = canvas.getContext('2d');
-        function resizeCanvas() { const aboutSection = document.getElementById('sobre'); if(aboutSection) { canvas.width = aboutSection.offsetWidth; canvas.height = aboutSection.offsetHeight; } }
-        resizeCanvas(); window.addEventListener('resize', resizeCanvas);
-        const snakes = []; const snakeColors = ['#3b82f6', '#10b981', '#f97316', '#06b6d4', '#8b5cf6', '#eab308']; const maxSnakes = 6; const snakeSpeed = 1.5; const maxSegments = 30; const segmentSize = 4;
-        class Snake { constructor() { this.color = snakeColors[Math.floor(Math.random() * snakeColors.length)]; this.segments = []; this.length = Math.floor(Math.random() * 15) + 15; this.direction = Math.random() < 0.5 ? 'horizontal' : 'vertical'; this.velocity = { x: 0, y: 0 }; if (this.direction === 'horizontal') { this.x = Math.random() < 0.5 ? -segmentSize * 5 : canvas.width + segmentSize * 5; this.y = Math.random() * canvas.height; this.velocity.x = this.x < 0 ? snakeSpeed : -snakeSpeed; } else { this.x = Math.random() * canvas.width; this.y = Math.random() < 0.5 ? -segmentSize * 5 : canvas.height + segmentSize * 5; this.velocity.y = this.y < 0 ? snakeSpeed : -snakeSpeed; } for (let i = 0; i < maxSegments; i++) { this.segments.push({ x: this.x, y: this.y }); } } update() { this.x += this.velocity.x; this.y += this.velocity.y; const head = { x: this.x, y: this.y }; this.segments.unshift(head); if (this.segments.length > this.length) { this.segments.pop(); } if (Math.random() < 0.01) { if (this.direction === 'horizontal') { this.direction = 'vertical'; this.velocity.x = 0; this.velocity.y = Math.random() < 0.5 ? snakeSpeed : -snakeSpeed; } else { this.direction = 'horizontal'; this.velocity.x = Math.random() < 0.5 ? snakeSpeed : -snakeSpeed; this.velocity.y = 0; } } } draw() { ctx.fillStyle = this.color; ctx.shadowColor = this.color; ctx.shadowBlur = 10; for (let i = 0; i < this.segments.length; i++) { const segment = this.segments[i]; ctx.fillRect(segment.x, segment.y, segmentSize, segmentSize); ctx.shadowBlur = 10 - (i / this.segments.length) * 8; } ctx.shadowBlur = 0; } isOffscreen() { return (this.x < -segmentSize * 10 || this.x > canvas.width + segmentSize * 10 || this.y < -segmentSize * 10 || this.y > canvas.height + segmentSize * 10); } }
-        function animateSnakes() { ctx.clearRect(0, 0, canvas.width, canvas.height); if (snakes.length < maxSnakes && Math.random() < 0.05) { snakes.push(new Snake()); } for (let i = snakes.length - 1; i >= 0; i--) { const snake = snakes[i]; snake.update(); snake.draw(); if (snake.isOffscreen()) { snakes.splice(i, 1); } } requestAnimationFrame(animateSnakes); } animateSnakes();
-
-        // --- Animação de Fundo do Footer ---
-        if(document.getElementById('footer-background-grid')) {
-            gsap.fromTo("#footer-background-grid", 
-                { opacity: 0.02, scale: 1 }, 
-                { opacity: 0.04, scale: 1.02, duration: 8, repeat: -1, yoyo: true, ease: "sine.inOut" }
-            );
-        }
+        // Canvas Snake (Simplified for space)
+        const cvs = document.getElementById('about-snake-animation'); const ctx = cvs.getContext('2d');
+        function rz() { cvs.width = cvs.offsetWidth; cvs.height = cvs.offsetHeight; } rz(); window.addEventListener('resize', rz);
+        const snk = []; class S { constructor() { this.c = ['#3b82f6','#10b981','#f97316'][Math.floor(Math.random()*3)]; this.seg = []; this.x = Math.random()*cvs.width; this.y = Math.random()*cvs.height; this.vx = 1.5; this.vy = 0; } update() { this.x += this.vx; this.y += this.vy; this.seg.unshift({x:this.x, y:this.y}); if(this.seg.length>20) this.seg.pop(); if(Math.random()<0.02) { this.vx = (Math.random()-0.5)*3; this.vy = (Math.random()-0.5)*3; } } draw() { ctx.fillStyle = this.c; this.seg.forEach(s => ctx.fillRect(s.x, s.y, 3, 3)); } }
+        function anim() { ctx.clearRect(0,0,cvs.width,cvs.height); if(snk.length<5) snk.push(new S()); snk.forEach(s => { s.update(); s.draw(); }); requestAnimationFrame(anim); } anim();
     </script>
 </body>
 </html>
