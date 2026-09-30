@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Gabriel Utsch Souza | Gestão de TI & Full Stack Automation</title>
+    
+    <!-- Tipografia Técnica e Moderna -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Schema.org estruturado em JSON-LD para ATS e robôs de IA -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Gabriel Utsch Souza",
+      "jobTitle": "Assistente Administrativo de TI & Desenvolvedor Full Stack",
+      "url": "https://www.uteshi.com.br",
+      "email": "gabriel.utsch.souza@gmail.com",
+      "telephone": "+55-31-97518-7588",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Belo Horizonte",
+        "addressRegion": "MG",
+        "addressCountry": "BR"
+      },
+      "sameAs": [
+        "https://linkedin.com/in/uteshi",
+        "https://github.com/uteshi",
+        "https://www.uteshi.com.br"
+      ],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Estácio",
+        "department": "Gestão de Tecnologia da Informação"
+      },
+      "knowsAbout": [
+        "Gestão de TI",
+        "Google Gemini (Motor de Criação & Co-pilot)",
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "Google Apps Script",
+        "Supabase",
+        "Looker Studio",
+        "VBA",
+        "ERP Bling",
+        "Licitações Públicas (B2G)",
+        "PNCP",
+        "Engenharia de Prompt",
+        "E-commerce",
+        "Automação de Processos"
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg-body: #0a0d12;
+            --bg-card: #12161f;
+            --bg-card-subtle: #181d28;
+            --border-color: #262c38;
+            --border-highlight: #3b4455;
+            --text-primary: #f0f4f8;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --accent: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.12);
+            --gemini-color: #a855f7;
+            --gemini-bg: rgba(168, 85, 247, 0.12);
+            --gemini-border: rgba(168, 85, 247, 0.35);
+            --warning-color: #f59e0b;
+            --warning-bg: rgba(245, 158, 11, 0.1);
+            --warning-border: rgba(245, 158, 11, 0.3);
+            --tag-bg: #1c2331;
+            --tag-border: #2e384d;
+            --success: #10b981;
+            --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --font-title: 'Syne', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-body);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 32px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .resume-container {
+            max-width: 920px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 44px;
+            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+
+        /* Barra Superior Interativa */
+        .web-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 28px;
+            padding-bottom: 18px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .status-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 11.5px;
+            font-family: var(--font-mono);
+            font-weight: 500;
+            color: var(--success);
+            background: rgba(16, 185, 129, 0.1);
+            padding: 5px 12px;
+            border-radius: 20px;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+            background: var(--success);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--success);
+        }
+
+        .action-btns {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            background: var(--tag-bg);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            padding: 8px 14px;
+            font-size: 12.5px;
+            font-weight: 500;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .btn:hover {
+            border-color: var(--accent);
+            background: var(--accent-glow);
+            color: var(--accent);
+        }
+
+        .btn-primary {
+            background: #0284c7;
+            border-color: #38bdf8;
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #0369a1;
+            border-color: #7dd3fc;
+            color: #fff;
+        }
+
+        /* Cabeçalho */
+        header {
+            margin-bottom: 32px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 24px;
+        }
+
+        h1 {
+            font-family: var(--font-title);
+            font-size: 38px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+            line-height: 1.15;
+        }
+
+        .role-headline {
+            font-size: 14.5px;
+            font-weight: 600;
+            color: var(--accent);
+            margin-top: 6px;
+            letter-spacing: 0.3px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 18px;
+            margin-top: 16px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .contact-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .contact-item a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.15s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        /* Seções Gerais */
+        section {
+            margin-bottom: 32px;
+        }
+
+        .section-header {
+            border-left: 4px solid var(--accent);
+            padding-left: 14px;
+            margin-bottom: 18px;
+        }
+
+        h2 {
+            font-family: var(--font-title);
+            font-size: 19px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #ffffff;
+        }
+
+        /* Card de Resumo */
+        .summary-card {
+            background: var(--bg-card-subtle);
+            border: 1px solid var(--border-color);
+            padding: 18px 22px;
+            border-radius: 10px;
+            font-size: 13.5px;
+            color: #cbd5e1;
+            text-align: justify;
+            line-height: 1.65;
+        }
+
+        .summary-card strong {
+            color: #ffffff;
+        }
+
+        .metric-highlight {
+            background: rgba(56, 189, 248, 0.12);
+            color: #38bdf8;
+            font-weight: 600;
+            padding: 1px 5px;
+            border-radius: 4px;
+        }
+
+        /* Itens de Experiência e Projetos */
+        .experience-item, .project-item {
+            background: var(--bg-card-subtle);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px 22px;
+            margin-bottom: 18px;
+            transition: border-color 0.2s;
+        }
+
+        .experience-item:hover, .project-item:hover {
+            border-color: var(--border-highlight);
+        }
+
+        .item-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+
+        .item-title-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .item-company {
+            font-size: 16px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .item-role {
+            font-size: 13.5px;
+            font-weight: 500;
+            color: var(--accent);
+        }
+
+        .badges-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .item-date {
+            font-family: var(--font-mono);
+            font-size: 11.5px;
+            color: var(--text-muted);
+            background: var(--tag-bg);
+            padding: 3px 8px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            white-space: nowrap;
+        }
+
+        .badge-status {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 8px;
+            border-radius: 6px;
+            white-space: nowrap;
+        }
+
+        .badge-status.warning {
+            background: var(--warning-bg);
+            color: var(--warning-color);
+            border: 1px solid var(--warning-border);
+        }
+
+        .badge-status.success {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--success);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        /* Destaque: Motor Gemini */
+        .gemini-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-family: var(--font-mono);
+            font-size: 11px;
+            font-weight: 600;
+            color: #d8b4fe;
+            background: var(--gemini-bg);
+            border: 1px solid var(--gemini-border);
+            padding: 3px 9px;
+            border-radius: 6px;
+            margin-top: 4px;
+            margin-bottom: 8px;
+        }
+
+        .gemini-badge svg {
+            color: #c084fc;
+        }
+
+        .item-badge-link {
+            font-family: var(--font-mono);
+            font-size: 11.5px;
+            color: var(--accent);
+            text-decoration: none;
+            background: var(--accent-glow);
+            padding: 3px 8px;
+            border-radius: 6px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            transition: all 0.2s;
+        }
+
+        .item-badge-link:hover {
+            background: rgba(56, 189, 248, 0.25);
+            text-decoration: underline;
+        }
+
+        .item-description {
+            font-size: 13.5px;
+            color: #cbd5e1;
+            text-align: justify;
+            margin-top: 4px;
+        }
+
+        ul.achievement-list {
+            padding-left: 18px;
+            margin: 8px 0 10px 0;
+            font-size: 13px;
+            color: #cbd5e1;
+        }
+
+        ul.achievement-list li {
+            margin-bottom: 6px;
+            line-height: 1.55;
+        }
+
+        /* Tags de Tecnologias / Skills */
+        .tech-pill-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 10px;
+        }
+
+        .tech-pill {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            background: var(--tag-bg);
+            border: 1px solid var(--tag-border);
+            color: #7dd3fc;
+            padding: 2px 8px;
+            border-radius: 6px;
+            white-space: nowrap;
+        }
+
+        /* Estrutura Inferior: Formação & Competências */
+        .bottom-section-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .bottom-card {
+            background: var(--bg-card-subtle);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 22px 24px;
+        }
+
+        .bottom-card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .bottom-card-header h3 {
+            font-family: var(--font-title);
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .education-lang-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 20px;
+        }
+
+        .edu-item-title {
+            font-size: 14.5px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .edu-item-institution {
+            font-size: 13px;
+            color: var(--accent);
+            margin-top: 2px;
+        }
+
+        .edu-item-desc {
+            font-size: 12.5px;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+
+        .lang-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .lang-list li {
+            font-size: 13px;
+            color: #cbd5e1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--tag-bg);
+            border: 1px solid var(--border-color);
+            padding: 6px 10px;
+            border-radius: 6px;
+        }
+
+        .lang-list .lang-level {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            color: var(--accent);
+        }
+
+        .stack-grid-4 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+
+        .stack-box {
+            background: var(--tag-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 14px 16px;
+        }
+
+        .stack-box-title {
+            font-size: 12.5px;
+            font-weight: 700;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .stack-box-title.gemini-title {
+            color: #d8b4fe;
+        }
+
+        .stack-box-content {
+            font-size: 12.5px;
+            color: #94a3b8;
+            line-height: 1.5;
+        }
+
+        .stack-box-content strong {
+            color: #e2e8f0;
+        }
+
+        /* Otimização para Impressão e PDF */
+        @media print {
+            body {
+                background: #ffffff !important;
+                color: #000000 !important;
+                padding: 0 !important;
+                font-size: 10.5pt !important;
+            }
+
+            .web-actions {
+                display: none !important;
+            }
+
+            .resume-container {
+                max-width: 100% !important;
+                padding: 0 !important;
+                border: none !important;
+                box-shadow: none !important;
+                background: transparent !important;
+            }
+
+            h1 {
+                color: #000000 !important;
+                font-size: 24pt !important;
+            }
+
+            .role-headline {
+                color: #0369a1 !important;
+                font-size: 11pt !important;
+            }
+
+            .contact-info, .contact-item, .contact-item a {
+                color: #333333 !important;
+                font-size: 9pt !important;
+            }
+
+            .section-header {
+                border-left: 3px solid #000000 !important;
+                padding-left: 8pt !important;
+                margin-bottom: 10pt !important;
+            }
+
+            h2 {
+                color: #000000 !important;
+                font-size: 12pt !important;
+            }
+
+            .summary-card, .experience-item, .project-item, .bottom-card, .stack-box {
+                background: #ffffff !important;
+                border: 1px solid #e2e8f0 !important;
+                box-shadow: none !important;
+                padding: 10pt !important;
+                margin-bottom: 10pt !important;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            .summary-card strong, .metric-highlight {
+                color: #000000 !important;
+                background: transparent !important;
+            }
+
+            .item-company, .edu-item-title, .bottom-card-header h3, .stack-box-title {
+                color: #000000 !important;
+            }
+
+            .item-role, .edu-item-institution {
+                color: #0369a1 !important;
+            }
+
+            .item-date, .badge-status, .item-badge-link {
+                background: #f1f5f9 !important;
+                color: #334155 !important;
+                border: 1px solid #cbd5e1 !important;
+                font-size: 8pt !important;
+            }
+
+            .gemini-badge {
+                background: #f5f3ff !important;
+                color: #6b21a8 !important;
+                border: 1px solid #d8b4fe !important;
+            }
+
+            .tech-pill {
+                background: #f8fafc !important;
+                color: #1e293b !important;
+                border: 1px solid #cbd5e1 !important;
+                font-size: 7.5pt !important;
+            }
+
+            .lang-list li {
+                background: #ffffff !important;
+                border: 1px solid #e2e8f0 !important;
+                color: #000000 !important;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 680px) {
+            .resume-container {
+                padding: 24px 16px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .education-lang-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stack-grid-4 {
+                grid-template-columns: 1fr;
+            }
+
+            .web-actions {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .action-btns {
+                width: 100%;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="resume-container">
+        
+        <!-- Barra Superior Interativa -->
+        <nav class="web-actions" aria-label="Ações Rápidas">
+            <div class="status-tag">
+                <span class="status-dot"></span>
+                <span>DISPONÍVEL PARA PROJETOS & VAGAS</span>
+            </div>
+            <div class="action-btns">
+                <button class="btn btn-primary" onclick="window.print()">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+                    Imprimir / Salvar PDF
+                </button>
+                <button class="btn" onclick="navigator.clipboard.writeText('gabriel.utsch.souza@gmail.com'); alert('E-mail copiado: gabriel.utsch.souza@gmail.com');">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                    Copiar E-mail
+                </button>
+                <a href="https://www.uteshi.com.br" class="btn">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    Portfólio
+                </a>
+            </div>
+        </nav>
+
+        <!-- Cabeçalho Principal -->
+        <header>
+            <h1>Gabriel Utsch Souza</h1>
+            <div class="role-headline">Gestão de TI | Desenvolvedor Full Stack & Automação de Processos | Engenharia de Prompt & BI</div>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Belo Horizonte, MG - Brasil</span>
+                </div>
+                <div class="contact-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                    <a href="tel:+5531975187588">(31) 9 7518-7588</a>
+                </div>
+                <div class="contact-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <a href="mailto:gabriel.utsch.souza@gmail.com">gabriel.utsch.souza@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    <a href="https://linkedin.com/in/uteshi" target="_blank" rel="noopener">linkedin.com/in/uteshi</a>
+                </div>
+                <div class="contact-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                    <a href="https://github.com/uteshi" target="_blank" rel="noopener">github.com/uteshi</a>
+                </div>
+                <div class="contact-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                    <a href="https://www.uteshi.com.br" target="_blank" rel="noopener">uteshi.com.br</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Resumo Profissional / Objetivo -->
+        <section>
+            <div class="section-header">
+                <h2>Perfil Profissional & Objetivo</h2>
+            </div>
+            <div class="summary-card">
+                Profissional com sólida atuação na <strong>intersecção entre Gestão de TI, Engenharia de Software e Eficiência Operacional</strong>. Especialista em conceber soluções de ponta a ponta com alto impacto em receita e governança, utilizando o <strong>Google Gemini como motor primoroso de aceleração técnica, arquitetura de software e engenharia de prompt</strong>. Histórico comprovado de resultados: idealizei e implementei o motor de auditoria e dashboard que <span class="metric-highlight">escalou o faturamento de licitações públicas de R$ 100 mil para a faixa de R$ 800 mil – R$ 1 Milhão/mês</span> na DLS Comércio, além de liderar operação de e-commerce que atingiu <span class="metric-highlight">R$ 92 mil em vendas com apenas R$ 2.400 em Ads</span>. Foco em posições estratégicas de desenvolvimento, liderança técnica e gestão de processos orientada a dados.
+            </div>
+        </section>
+
+        <!-- Experiência Profissional -->
+        <section>
+            <div class="section-header">
+                <h2>Experiência Profissional</h2>
+            </div>
+
+            <!-- DLS Comércio -->
+            <article class="experience-item">
+                <div class="item-head">
+                    <div class="item-title-group">
+                        <span class="item-company">DLS Comércio Ltda</span>
+                        <span class="item-role">Assistente Administrativo / TI & Automação de Processos</span>
+                    </div>
+                    <span class="item-date">Nov 2025 – Presente</span>
+                </div>
+                <div class="item-description">
+                    Atuação estratégica unindo engenharia de dados, automação de fluxos e inteligência em vendas governamentais (B2G/B2B).
+                </div>
+                <ul class="achievement-list">
+                    <li><strong>Engenharia de Dados & BI:</strong> Idealizei e desenvolvi um Dashboard Executivo Automatizado em Google Apps Script integrado ao Looker Studio, realizando consolidação de dados em tempo real. O sistema foi o alicerce operacional que alavancou o faturamento mensal de <span class="metric-highlight">R$ 100 mil para marcas de R$ 800 mil a R$ 1 Milhão</span>.</li>
+                    <li><strong>Auditoria Automática & Precificação:</strong> Estruturei motores modulares de auditoria de dados para identificação de discrepâncias de preços e prazos em editais públicos (ComprasNet, PNCP, BLL), mitigando riscos de desclassificação.</li>
+                    <li><strong>Aceleração com Inteligência Artificial:</strong> Aplicação constante do Google Gemini para depuração de scripts, análise preditiva de editais e refinamento de processos corporativos.</li>
+                </ul>
+                <div class="tech-pill-container">
+                    <span class="tech-pill">Google Apps Script</span>
+                    <span class="tech-pill">Looker Studio</span>
+                    <span class="tech-pill">JavaScript (ES6+)</span>
+                    <span class="tech-pill">Licitações B2G / PNCP</span>
+                    <span class="tech-pill">Google Gemini</span>
+                </div>
+            </article>
+
+            <!-- Utilitex! -->
+            <article class="experience-item">
+                <div class="item-head">
+                    <div class="item-title-group">
+                        <span class="item-company">Utilitex!</span>
+                        <span class="item-role">Fundador & Gestor de Operações / E-commerce</span>
+                    </div>
+                    <span class="item-date">Set 2024 – Dez 2025</span>
+                </div>
+                <div class="item-description">
+                    Liderança absoluta sobre os fluxos operacionais, contábeis, logísticos e de tráfego pago de operação no marketplace Shopee (produção enxuta terceirizada).
+                </div>
+                <ul class="achievement-list">
+                    <li><strong>Eficiência Operacional Extrema:</strong> Validação de modelo de negócio com curva ABC reduzida de SKUs, atingindo <span class="metric-highlight">R$ 92 mil de faturamento bruto</span> com investimento anual em tráfego pago fixado em <span class="metric-highlight">apenas R$ 2.400,00</span> (altíssimo ROAS).</li>
+                    <li><strong>Produto Campeão:</strong> Posicionamento de produto customizado com <span class="metric-highlight">mais de 1.000 unidades vendidas</span> e avaliação consolidada em <strong>4.85 / 5.0 estrelas</strong>.</li>
+                    <li><strong>Modelagem Paramétrica:</strong> Desenvolvimento técnico de gabaritos e soluções orientadas a manufatura ágil, eliminando quebras de embalagens e retrabalho.</li>
+                </ul>
+                <div class="tech-pill-container">
+                    <span class="tech-pill">Gestão de E-commerce</span>
+                    <span class="tech-pill">Shopee Ads</span>
+                    <span class="tech-pill">Gestão Financeira & Custos</span>
+                    <span class="tech-pill">Supply Chain</span>
+                </div>
+            </article>
+
+            <!-- Genial Carimbos -->
+            <article class="experience-item">
+                <div class="item-head">
+                    <div class="item-title-group">
+                        <span class="item-company">Genial Carimbos</span>
+                        <span class="item-role">Auxiliar Administrativo de Processos & Sistemas</span>
+                    </div>
+                    <span class="item-date">Nov 2022 – Mar 2025</span>
+                </div>
+                <div class="item-description">
+                    Otimização de processos administrativos, rotinas fiscais e canais de comércio eletrônico.
+                </div>
+                <ul class="achievement-list">
+                    <li><strong>Automação de Rotinas:</strong> Estruturação de rotinas em VBA/Excel e parametrização do ERP Bling, otimizando fluxos de emissão fiscal, faturamento e estoque.</li>
+                    <li><strong>E-commerce & CRM:</strong> Gestão técnica da loja virtual em Shopify e criação de réguas automatizadas de e-mail marketing via Klaviyo para nutrição de base.</li>
+                    <li><strong>Importação Direta:</strong> Gestão de suprimentos e interlocução operacional com parceiros fabricantes na China para compras de insumos.</li>
+                </ul>
+                <div class="tech-pill-container">
+                    <span class="tech-pill">ERP Bling</span>
+                    <span class="tech-pill">VBA / Macros Excel</span>
+                    <span class="tech-pill">Shopify</span>
+                    <span class="tech-pill">Klaviyo</span>
+                    <span class="tech-pill">Importação & Logística</span>
+                </div>
+            </article>
+        </section>
+
+        <!-- Projetos Técnicos em Destaque -->
+        <section>
+            <div class="section-header">
+                <h2>Projetos em Destaque & Inovação</h2>
+            </div>
+
+            <!-- Licit-AZ (Inacabado / Em Desenvolvimento) -->
+            <article class="project-item">
+                <div class="item-head">
+                    <div class="item-title-group">
+                        <span class="item-company">Licit-AZ (licit-dar)</span>
+                        <a href="https://github.com/uteshi/licit-dar" target="_blank" rel="noopener" class="item-badge-link">github.com/uteshi/licit-dar</a>
+                    </div>
+                    <div class="badges-row">
+                        <span class="badge-status warning">Projeto Inacabado (Em Desenvolvimento)</span>
+                        <span class="item-date">Next.js • React • Supabase • PNCP API</span>
+                    </div>
+                </div>
+                
+                <div class="gemini-badge">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    Motor de Criação: Google Gemini (Arquitetura, geração de código e estruturação de dados)
+                </div>
+
+                <div class="item-description">
+                    Plataforma web Full Stack em desenvolvimento ativo para consulta, filtragem dinâmica e monitoramento em tempo real de oportunidades de licitações públicas em âmbito nacional.
+                </div>
+                <ul class="achievement-list">
+                    <li>Consumo direto da API REST oficial do <strong>Portal Nacional de Contratações Públicas (PNCP)</strong>.</li>
+                    <li>Arquitetura moderna com Next.js (App Router), componentes React dinâmicos, Supabase (PostgreSQL) para persistência e deploy automatizado via Vercel.</li>
+                    <li>O <strong>Google Gemini atuou como motor essencial de co-pilotagem técnica</strong>, acelerando a implementação de filtros complexos por modalidade e estado.</li>
+                </ul>
+                <div class="tech-pill-container">
+                    <span class="tech-pill">Next.js</span>
+                    <span class="tech-pill">React</span>
+                    <span class="tech-pill">TypeScript</span>
+                    <span class="tech-pill">Supabase (PostgreSQL)</span>
+                    <span class="tech-pill">Tailwind CSS</span>
+                    <span class="tech-pill">Google Gemini</span>
+                </div>
+            </article>
+
+            <!-- Dashboard Executivo Apps Script (Concluído e Operacional) -->
+            <article class="project-item">
+                <div class="item-head">
+                    <div class="item-title-group">
+                        <span class="item-company">Motor de Auditoria & Dashboard B2G</span>
+                        <span class="item-role">DLS Comércio Ltda</span>
+                    </div>
+                    <div class="badges-row">
+                        <span class="badge-status success">Em Produção / Operacional</span>
+                        <span class="item-date">Google Apps Script • Looker Studio</span>
+                    </div>
+                </div>
+
+                <div class="gemini-badge">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    Motor de Criação: Google Gemini (Elaboração lógica do script, cálculos de margem e ETL)
+                </div>
+
+                <div class="item-description">
+                    Pipeline modular de dados para inteligência executiva em licitações. Disparado por interface personalizada na planilha, consolida informações diárias, semanais e mensais de compras públicas em painéis interativos no Looker Studio, transformando a tomada de decisão societária.
+                </div>
+                <div class="tech-pill-container">
+                    <span class="tech-pill">Google Apps Script (ES6+)</span>
+                    <span class="tech-pill">Looker Studio</span>
+                    <span class="tech-pill">Google Sheets API</span>
+                    <span class="tech-pill">Data Analytics</span>
+                    <span class="tech-pill">Google Gemini</span>
+                </div>
+            </article>
+
+            <!-- Ferramenta Python zpl_to_pdf (Inacabado / Protótipo) -->
+            <article class="project-item">
+                <div class="item-head">
+                    <div class="item-title-group">
+                        <span class="item-company">zpl_to_pdf | Utilitário Logístico Desktop</span>
+                        <span class="item-role">Aplicação Desktop</span>
+                    </div>
+                    <div class="badges-row">
+                        <span class="badge-status warning">Projeto Inacabado (Protótipo Funcional)</span>
+                        <span class="item-date">Python • CustomTkinter</span>
+                    </div>
+                </div>
+
+                <div class="gemini-badge">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    Motor de Criação: Google Gemini (Construção da interface gráfica e manipulação de arquivos)
+                </div>
+
+                <div class="item-description">
+                    Software desktop com interface gráfica moderna construído em Python para otimização de despacho logístico. Converte e redimensiona em lote etiquetas térmicas de formato ZPL para documentos PDF prontos para impressão física, reduzindo gargalos operacionais no e-commerce.
+                </div>
+                <div class="tech-pill-container">
+                    <span class="tech-pill">Python</span>
+                    <span class="tech-pill">CustomTkinter (GUI)</span>
+                    <span class="tech-pill">Automação de Arquivos</span>
+                    <span class="tech-pill">Google Gemini</span>
+                </div>
+            </article>
+
+            <!-- Ecossistema Web & LPs -->
+            <article class="project-item">
+                <div class="item-head">
+                    <div class="item-title-group">
+                        <span class="item-company">Ecossistema Web & Portfólio Digital de Alta Conversão</span>
+                        <a href="https://www.uteshi.com.br" target="_blank" rel="noopener" class="item-badge-link">uteshi.com.br</a>
+                    </div>
+                    <div class="badges-row">
+                        <span class="item-date">Tailwind CSS • GSAP • Vanilla JS • Netlify/Vercel</span>
+                    </div>
+                </div>
+
+                <div class="gemini-badge">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    Motor de Criação: Google Gemini (Front-end semântico, animações fluidas e integrações)
+                </div>
+
+                <div class="item-description">
+                    Engenharia front-end aplicada a plataformas responsivas com foco estrito em Core Web Vitals, autoridade de marca e taxas de conversão:
+                </div>
+                <ul class="achievement-list">
+                    <li><strong>Uteshi.com.br (Publicado):</strong> Hub profissional e portfólio desenvolvido com estética Dark Mode, Glassmorphism e micro-animações via GSAP e ScrollTrigger.</li>
+                    <li><strong>Serena Enxovais & DLS Comércio (Publicados):</strong> Landing pages comerciais mobile-first com cálculo de frete dinâmico via API ViaCEP e checkout via WhatsApp.</li>
+                    <li><strong>Manutenção Impressora 3D BH (manutencao3dbh.com.br):</strong> Projeto desenvolvido em conjunto com parceiro técnico, atualmente em <strong>fase de planejamento de viabilidade inicial (não operacional)</strong>.</li>
+                </ul>
+                <div class="tech-pill-container">
+                    <span class="tech-pill">HTML5 Semântico</span>
+                    <span class="tech-pill">CSS3 / Tailwind</span>
+                    <span class="tech-pill">GSAP</span>
+                    <span class="tech-pill">API ViaCEP</span>
+                    <span class="tech-pill">Google Gemini</span>
+                </div>
+            </article>
+        </section>
+
+        <!-- SEÇÃO INFERIOR REFORMATADA: FORMAÇÃO & COMPETÊNCIAS -->
+        <section>
+            <div class="section-header">
+                <h2>Formação Acadêmica & Competências</h2>
+            </div>
+
+            <div class="bottom-section-grid">
+                
+                <!-- Bloco 1: Formação Acadêmica & Idiomas (Layout Horizontal Balanceado) -->
+                <div class="bottom-card">
+                    <div class="bottom-card-header">
+                        <h3>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                            Educação Formal & Idiomas
+                        </h3>
+                    </div>
+                    
+                    <div class="education-lang-grid">
+                        <div>
+                            <div class="edu-item-title">CST em Gestão da Tecnologia da Informação</div>
+                            <div class="edu-item-institution">Faculdade Estácio de Sá • EAD</div>
+                            <div class="edu-item-desc">Formação superior focada em governança de TI, arquitetura de sistemas, gestão estratégica de processos e infraestrutura. Previsão de formatura: <strong>2027</strong>.</div>
+                        </div>
+
+                        <div>
+                            <ul class="lang-list">
+                                <li>
+                                    <span><strong>Inglês</strong></span>
+                                    <span class="lang-level">Full Professional / Avançado</span>
+                                </li>
+                                <li>
+                                    <span><strong>Espanhol</strong></span>
+                                    <span class="lang-level">Elementary / Básico</span>
+                                </li>
+                                <li>
+                                    <span><strong>Português</strong></span>
+                                    <span class="lang-level">Nativo</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bloco 2: Matriz de Competências Técnicas (Grid de 4 Caixas Simétricas) -->
+                <div class="bottom-card">
+                    <div class="bottom-card-header">
+                        <h3>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            Stack Tecnológica & Matriz de Especialidades
+                        </h3>
+                    </div>
+
+                    <div class="stack-grid-4">
+                        <!-- Caixa 1: Linguagens & Web -->
+                        <div class="stack-box">
+                            <div class="stack-box-title">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                                Linguagens & Web
+                            </div>
+                            <div class="stack-box-content">
+                                <strong>JavaScript (ES6+)</strong>, <strong>TypeScript</strong>, <strong>Python</strong>, HTML5 Semântico, CSS3, Tailwind CSS, <strong>React</strong>, <strong>Next.js</strong>, GSAP (Animações).
+                            </div>
+                        </div>
+
+                        <!-- Caixa 2: Automação, Dados & BI -->
+                        <div class="stack-box">
+                            <div class="stack-box-title">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                                Automação, Dados & BI
+                            </div>
+                            <div class="stack-box-content">
+                                <strong>Google Apps Script</strong>, <strong>Looker Studio</strong>, <strong>Supabase (PostgreSQL)</strong>, VBA / Macros Excel Avançado, APIs RESTful, Git & GitHub.
+                            </div>
+                        </div>
+
+                        <!-- Caixa 3: Motor Gemini & IA -->
+                        <div class="stack-box" style="border-color: var(--gemini-border); background: rgba(168, 85, 247, 0.05);">
+                            <div class="stack-box-title gemini-title">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                Motor Gemini & IA Co-pilot
+                            </div>
+                            <div class="stack-box-content">
+                                <strong>Google Gemini como motor central</strong> de aceleração técnica, arquitetura de sistemas, <strong>Engenharia de Prompt avançada</strong> e pipelines analíticos com LLMs.
+                            </div>
+                        </div>
+
+                        <!-- Caixa 4: Negócios & Operações -->
+                        <div class="stack-box">
+                            <div class="stack-box-title">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                                Negócios, B2G & E-commerce
+                            </div>
+                            <div class="stack-box-content">
+                                <strong>Licitações Públicas (B2G - PNCP, ComprasNet, BLL)</strong>, Precificação e Compliance, <strong>ERP Bling</strong>, Shopify, Shopee e Gestão de Métricas (CAC/ROAS).
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
